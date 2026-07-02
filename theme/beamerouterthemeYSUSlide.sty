@@ -12,12 +12,12 @@
     text margin right=0.8cm
 }
 
-%% 首页标题背景，原模板代码
+%% 首页标题背景
 \defbeamertemplate{background canvas}{title}{%
     \includegraphics[width=\paperwidth, height=\paperheight]{logos/background.png}
 }
 
-%% 首页页面顶部元素，原模板代码
+%% 首页页面顶部元素
 \newcommand{\topslider}[1]{%
     \begin{tikzpicture}[overlay, remember picture]
         \draw [fill=#1, draw=none, rounded corners=2pt] (current page.north east)
@@ -32,16 +32,16 @@
     \end{tikzpicture}
 }
 
-%首页顶栏logo，原模板代码
+%首页顶栏logo
 \newcommand{\banner}{%
     \begin{tikzpicture}[overlay, remember picture]
         \node[anchor=north west, xshift=0.6cm, yshift=-0.3cm] at (current page.north west) {
-            \includegraphics[scale=0.5]{logos/buaa_logo.png}
+            \includegraphics[width=5.2cm]{logos/ysu_logo.png}
         };
     \end{tikzpicture}
 }
 
-%% 底部有弧度的页脚部分，原模板代码
+%% 底部有弧度的页脚部分
 \newcommand{\bottomslider}[1]{%
     \begin{tikzpicture}[overlay, remember picture]
         \draw [fill=#1, draw=none, rounded corners=2pt] (current page.south east)
@@ -56,22 +56,22 @@
     \end{tikzpicture}
 }
 
-%首页右下角网址，原模板代码
-\newcommand{\buaaurl}{%
+%首页右下角网址
+\newcommand{\ysuurl}{%
     \begin{tikzpicture}[overlay, remember picture]
-        \node[anchor=south east, text=buaablue, xshift=-0.2cm, yshift=0.03cm] at (current page.south east) {\tiny www.buaa.edu.cn};
+        \node[anchor=south east, text=ysublue, xshift=-0.2cm, yshift=0.03cm] at (current page.south east) {\tiny www.ysu.edu.cn};
     \end{tikzpicture}
 }
 
-%% 首页背景元素，原模板代码
+%% 首页背景元素
 \defbeamertemplate{background}{title}{%
     \topslider{white}
     \banner %首页的Logo
     \bottomslider{white} %首页底部颜色
-    \buaaurl %首页底部网址
+    \ysuurl %首页底部网址
 }
 
-%首页正文部分，原模板代码
+%首页正文部分
 \defbeamertemplate{title page}{text}{%
     \begin{center} %所有文字居中
     \vspace{2.5cm} %标题距离banner的距离
@@ -85,32 +85,32 @@
     %\insertdate%如有必要，可再插入日期
     \end{center}
 }
-%设置首页页面模板，原模板代码
+%设置首页页面模板
 \setbeamertemplate{title page}[text]
-\pgfkeys{/beamerbuaaslide/outer/.cd,
+\pgfkeys{/beamerysuslide/outer/.cd,
     footline/.initial=empty,
     navigation symbols/.initial=empty,
     title page/.initial=text
 }
 
-%% 普通页面背景，原模板代码
+%% 普通页面背景
 \defbeamertemplate{background canvas}{empty}{}
-\pgfkeys{/beamerhgf/outer/.cd,
+\pgfkeys{/beamerysuslide/outer/.cd,
     background canvas/.initial=empty
 }
 
-%普通页面左下角信息，原模板代码
+%普通页面左下角信息
 \setbeamertemplate{footline}{%
     \hspace{0.8cm}
     \usebeamercolor[fg]{title}\insertauthor\enspace\vrule width0.3pt\enspace\inserttitle%左下角作者信息和标题信息
     \vspace{0.04cm} %页脚到底部的距离
 }
 
-% 普通页面右下角Logo，原模板代码
+% 普通页面右下角Logo
 \newcommand{\footerlogo}{%
     \begin{tikzpicture}[overlay, remember picture]
         \node[anchor=south east, xshift=-1.2cm, yshift=-0.1cm] at (current page.south east) {
-            \includegraphics[scale=0.18]{logos/buaa_logo_bottom.png}
+            \includegraphics[width=2.6cm]{logos/ysu_logo_bottom.png}
         };
     \end{tikzpicture}
 }
@@ -121,9 +121,9 @@
     \usebeamercolor[fg]{title}\usebeamerfont*{navigation symbols}\insertframenumber/\inserttotalframenumber
 }
 
-%% 普通页面frame背景模板，原模板代码
+%% 普通页面frame背景模板
 \defbeamertemplate{background}{frame}{%框架
-    \bottomslider{buaablue} %底部颜色为北航蓝
+    \bottomslider{ysublue} %底部颜色为燕大蓝
     \footerlogo %右下角logo
 }
 
@@ -135,26 +135,26 @@
 %普通页面标题设置
 \defbeamertemplate{frametitle}{frame}{%
     \vspace{10pt}%
-    \usebeamercolor[buaablue]{frametitle}\usebeamerfont{frametitle}
+    \usebeamercolor[ysublue]{frametitle}\usebeamerfont{frametitle}
     \thesubsection. \insertsubsection%显示二级标题
     \ifx\insertsubsubsection\empty%如果没有三级标题什么都不做        
     \else
-        \usebeamercolor[skyblue]{framesubtitle}\usebeamerfont{framesubtitle}
+        \usebeamercolor[ysubrightblue]{framesubtitle}\usebeamerfont{framesubtitle}
         \thesubsubsection.\insertsubsubsection
     \fi    
     \vspace{0.5pt}%标题到下面的线之间的距离
-    {\color{buaablue}\hrule height 1.5pt depth 0pt}%标题下面的线
+    {\color{ysublue}\hrule height 1.5pt depth 0pt}%标题下面的线
 }
 
 %因为在frame中引入了section，所以要为目录页面单独设置一个frametitle的模板，去掉了section信息
 \defbeamertemplate{frametitle}{outlineframe}{
     \vspace{12pt}%
-    \usebeamercolor[buaablue]{frametitle}\usebeamerfont{frametitle}
+    \usebeamercolor[ysublue]{frametitle}\usebeamerfont{frametitle}
     \insertframetitle
-    \usebeamercolor[skyblue]{framesubtitle}\usebeamerfont{framesubtitle}
+    \usebeamercolor[ysubrightblue]{framesubtitle}\usebeamerfont{framesubtitle}
     \insertframesubtitle
     \vspace{0.5pt}%标题到下面的线之间的距离
-    {\color{buaablue}\hrule height 1.5pt depth 0pt}%标题下面的线
+    {\color{ysublue}\hrule height 1.5pt depth 0pt}%标题下面的线
 }
 
 %为普通frame设置模板
@@ -217,14 +217,14 @@
     \begin{frame}%
         \begin{center} %所有文字居中
         \vspace{2.5cm}%
-        \huge\textcolor{chinared}{\textbf{\thesection.\insertsectionhead}}%
+        \huge\textcolor{ysured}{\textbf{\thesection.\insertsectionhead}}%
         \end{center}
     \end{frame}%
 }
 
 %目录样式
 \setbeamertemplate{section in toc}[sections numbered]
-\setbeamercolor{section in toc}{bg=white,fg=chinared}
+\setbeamercolor{section in toc}{bg=white,fg=ysured}
 
 %设置有代码块的frame
 \newenvironment{fragileframe}%

@@ -2,9 +2,10 @@
 
 %% 版本：1.0
 %% 2024-07-02
-%% 作者：景宗雷
+%% 原作者：景宗雷
+%% 燕山大学适配：Codex
 \documentclass[aspectratio=169,UTF8,t]{beamer}%比例是16:9，UTF8编码支持，顶部对齐
-\usepackage{buaaslide}
+\usepackage{ysuslide}
 \usepackage[UTF8]{ctex}
 \usepackage{xeCJK}
 \usepackage{fontawesome}%加入图标支持
@@ -16,11 +17,11 @@
 \newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
 
 %基本信息
-\title{北京航空航天大学幻灯片Latex模板}
-\subtitle{助力你的科研梦想}
-\author{景宗雷}
+\title{燕山大学幻灯片 LaTeX 模板}
+\subtitle{厚德、博学、求是}
+\author{作者姓名}
 \date{\today}
-\institute{计算机学院}
+\institute{学院名称}
 \newcommand{\last}{敬请批评指正！} %结束语
 %\newcommand{\last}{提问与解答环节}
 %基本信息结束
@@ -37,18 +38,18 @@
 
 \begin{frame}
     \frametitle{简介}
-    北京航空航天大学演示文稿Latex非官方模板。
+    燕山大学演示文稿 LaTeX 非官方模板。
 
-    本模板修改自ouc-slide-latex-template\footnote{https://github.com/dryangyq/ouc-slide-latex-template}模板，进行了适配北航的修改。
+    本模板修改自 ouc-slide-latex-template\footnote{https://github.com/dryangyq/ouc-slide-latex-template} 模板，并进行了燕山大学适配。
 
-    模板主要使用北航公布的视觉识别系统\footnote{https://xcb.buaa.edu.cn/vixt.htm}，包括北航蓝、星空蓝、天空蓝、中国红、品质灰、专金、专银。
+    模板主要使用燕山大学形象识别系统\footnote{https://vis.ysu.edu.cn/}，包括燕大蓝、亮蓝色、浅蓝色、辅助红、中性灰、金色、银色。
 
     此外，使用了大量的信息框来增加模板的活力。
     \begin{center}
         \begin{figure}
         \centering
-        \includegraphics[width=0.6\textwidth]{figs/buaa_main.png}
-            \caption{北航教学楼}
+        \includegraphics[width=0.58\textwidth]{figs/ysu_campus.jpg}
+            \caption{燕山大学校园景观}
             \label{fig:main}
         \end{figure}
     \end{center}
@@ -63,7 +64,7 @@
 \begin{frame}
     \frametitle{模板使用方法}    
     \begin{enumerate}
-        \item 从git上clone整个文件夹目录\footnote{https://github.com/RayKr/buaa-slide-latex-template}\\~
+        \item 从 git 上 clone 整个项目目录\\~
         \item 编辑tex文件进行修改\\~
         \item 编译tex文件为PDF\\~
         \begin{enumerate}
@@ -82,7 +83,7 @@
     \frametitle{字体是啥}
     模板使用的默认字体是鸿蒙字体。
 
-    如果对字体不满意，可下载其他字体，放入fonts文件夹，并在\textbf{beamerfontthemeBUAASlide.sty}文件中修改。
+    如果对字体不满意，可下载其他字体，放入fonts文件夹，并在\textbf{beamerfontthemeYSUSlide.sty}文件中修改。
     \begin{center}
         \begin{figure}
         \centering
@@ -99,7 +100,7 @@
     \frametitle{颜色}
     %\framesubtitle{基本颜色}
     
-    根据北航公布的标准颜色，定义了相关颜色，主要包括北航蓝、星空蓝、天空蓝、中国红、品质灰、专金、专银。其中文名称和代码如表\ref{table:color}所示。\\
+    根据燕山大学形象识别系统，定义了相关颜色，主要包括燕大蓝、亮蓝色、浅蓝色、辅助红、中性灰、金色、银色。其中文名称和代码如表\ref{table:color}所示。\\
     当然，也可以使用Latex自带的颜色，例如white、black等。
     
     \begin{table}
@@ -109,13 +110,13 @@
         \label{table:color}
         \begin{tabular}{ccc}
             \textbf{颜色} & \textbf{名称} & \textbf{中文名}\\\toprule
-            \crule[buaablue]{10pt}{10pt} & buaablue & 北航蓝 \\
-            \crule[spaceblue]{10pt}{10pt} & spaceblue & 星空蓝 \\
-            \crule[skyblue]{10pt}{10pt} & skyblue & 天空蓝 \\
-            \crule[chinared]{10pt}{10pt} & chinared & 中国红 \\
-            \crule[buaagray]{10pt}{10pt} & buaagray & 品质灰 \\
-            \crule[buaagolden]{10pt}{10pt} & buaagolden & 专金 \\
-            \crule[buaasilver]{10pt}{10pt} & buaasilver & 专银 \\
+            \crule[ysublue]{10pt}{10pt} & ysublue & 燕大蓝 \\
+            \crule[ysubrightblue]{10pt}{10pt} & ysubrightblue & 亮蓝色 \\
+            \crule[ysulightblue]{10pt}{10pt} & ysulightblue & 浅蓝色 \\
+            \crule[ysured]{10pt}{10pt} & ysured & 辅助红 \\
+            \crule[ysugray]{10pt}{10pt} & ysugray & 中性灰 \\
+            \crule[ysugold]{10pt}{10pt} & ysugold & 金色 \\
+            \crule[ysusilver]{10pt}{10pt} & ysusilver & 银色 \\
         \end{tabular}
     \end{table}
 \end{frame}
@@ -126,7 +127,7 @@
     \frametitle{颜色}
     %\framesubtitle{颜色等级}
     
-    \emph{定义的北航标准色，每一种颜色，都有九个等级，等级越低，颜色越浅。例如：对于北航蓝，其等级颜色如表\ref{table:colorgrade}所示。}\\
+    \emph{定义的燕山大学标准色，每一种颜色，都有九个等级，等级越低，颜色越浅。例如：对于燕大蓝，其等级颜色如表\ref{table:colorgrade}所示。}\\
     
     \begin{table}
         \centering
@@ -135,15 +136,15 @@
         \label{table:colorgrade}
         \begin{tabular}{cl}
             \textbf{颜色} & \textbf{名称}\\\toprule
-            \crule[buaablue20]{8pt}{8pt} & buaablue20 \\
-            \crule[buaablue30]{8pt}{8pt} & buaablue30 \\
-            \crule[buaablue40]{8pt}{8pt} & buaablue40 \\
-            \crule[buaablue50]{8pt}{8pt} & buaablue50 \\
-            \crule[buaablue60]{8pt}{8pt} & buaablue60 \\
-            \crule[buaablue70]{8pt}{8pt} & buaablue70 \\
-            \crule[buaablue80]{8pt}{8pt} & buaablue80 \\
-            \crule[buaablue90]{8pt}{8pt} & buaablue90 \\
-            \crule[buaablue]{8pt}{8pt} & buaablue \\\bottomrule
+            \crule[ysublue20]{8pt}{8pt} & ysublue20 \\
+            \crule[ysublue30]{8pt}{8pt} & ysublue30 \\
+            \crule[ysublue40]{8pt}{8pt} & ysublue40 \\
+            \crule[ysublue50]{8pt}{8pt} & ysublue50 \\
+            \crule[ysublue60]{8pt}{8pt} & ysublue60 \\
+            \crule[ysublue70]{8pt}{8pt} & ysublue70 \\
+            \crule[ysublue80]{8pt}{8pt} & ysublue80 \\
+            \crule[ysublue90]{8pt}{8pt} & ysublue90 \\
+            \crule[ysublue]{8pt}{8pt} & ysublue \\\bottomrule
         \end{tabular}
     \end{table}
 \end{frame}
@@ -175,18 +176,18 @@
 \begin{frame}
     \frametitle{列表框}
     列表框一般用来展示列表内容，使用vcolorbox，可以使用自定义颜色。
-    \begin{vcolorbox}[北京航空航天大学]{chinared}
-        1. 985、211重点高校
+    \begin{vcolorbox}[燕山大学]{ysured}
+        1. 河北省重点支持的高水平大学
 
-        2. 世界一流大学建设高校（A类）。
+        2. 以工学为主、多学科协调发展
     \end{vcolorbox}
-    \begin{vcolorbox}[学校校训]{skyblue}
-        德才兼备，知行合一
+    \begin{vcolorbox}[学校校训]{ysubrightblue}
+        厚德、博学、求是
     \end{vcolorbox}
-    \begin{vcolorbox}[学校特色]{buaablue}
-        1. 坚持初心使命，矢志空天报国
+    \begin{vcolorbox}[学校特色]{ysublue}
+        1. 背靠燕山，面朝大海
         
-        2. 顶尖工科、一流理科、精品文科、优势医工
+        2. 重型机械及装备优势鲜明
     \end{vcolorbox}
 \end{frame}
 
@@ -208,14 +209,14 @@
 \begin{frame}
     \frametitle{信息框}
     信息框（titlebox）主要用来勾勒一些需要注意的信息，颜色可以自定义。
-    \begin{titlebox}[提示框]{chinared}
-        这里展示的是中国红颜色的提示框。
+    \begin{titlebox}[提示框]{ysured}
+        这里展示的是辅助红颜色的提示框。
       \end{titlebox}
-      \begin{titlebox}[颜色展示]{buaablue}
-        这里展示北航蓝的颜色。当然，可以使用更多的颜色。 
+      \begin{titlebox}[颜色展示]{ysublue}
+        这里展示燕大蓝的颜色。当然，可以使用更多的颜色。 
       \end{titlebox}
-      \begin{titlebox}[另外一些颜色的显示]{skyblue}
-        这里展示天空蓝的颜色。当然，可以使用更多的颜色。 
+      \begin{titlebox}[另外一些颜色的显示]{ysubrightblue}
+        这里展示亮蓝色的颜色。当然，可以使用更多的颜色。 
       \end{titlebox}    
 \end{frame}
 
@@ -225,26 +226,25 @@
     \frametitle{要点框}
     要点框（pointbox）主要用来展示一些要点，需要和分栏配合使用，颜色可以自定义。 \\   
     高度可以写在参数中。  
-      \begin{columns}
+      \begin{columns}[T,onlytextwidth]
         \begin{column}{0.3\textwidth}
-            \begin{pointbox}[要点一]{chinared}{100pt}
-                顶尖工科\\
-                一流理科\\
-                精品文科\\
-                优势医工\\              
+            \begin{pointbox}[要点一]{ysured}{100pt}
+                厚德\\
+                博学\\
+                求是\\
             \end{pointbox}
         \end{column}
         \begin{column}{0.3\textwidth}
-            \begin{pointbox}[要点二]{buaablue}{100pt}
-                211\\
-                985\\
-                双一流 
+            \begin{pointbox}[要点二]{ysublue}{100pt}
+                燕山\\
+                渤海\\
+                重器 
             \end{pointbox}            
         \end{column}
         \begin{column}{0.3\textwidth}
-            \begin{pointbox}[要点三]{skyblue}{100pt}
-                院士\\
-                杰青 
+            \begin{pointbox}[要点三]{ysubrightblue}{100pt}
+                工科优势\\
+                多科协同 
             \end{pointbox}
         \end{column}
     \end{columns}    
@@ -255,16 +255,16 @@
 \begin{frame}
     \frametitle{文本框}
     标题框和文本框配合使用，基本上可以满足大部分的内容展示需求。 \\       
-    \begin{headbox}{chinared}
-        北京航空航天大学
+    \begin{headbox}{ysured}
+        燕山大学
     \end{headbox}  
-    \begin{textbox}{buaablue}
-        北京航空航天大学是新中国第一所航空航天高等学府，现隶属于工业和信息化部，是国家“985工程”和“211工程”重点建设的高校，2017年入选国家“双一流”建设高校名单。
+    \begin{textbox}{ysublue}
+        燕山大学源于哈尔滨工业大学重型机械相关学科，1997年更名为燕山大学并整体南迁秦皇岛。
 
-        学校校训是“德才兼备，知行合一”。
+        学校校训是“厚德、博学、求是”。
     \end{textbox}
-    \begin{textbox}{skyblue}
-        从航空救国到航空报国、航天报国，再到服务航空强国、航天强国建设，学校始终传承红色基因，把服务国家作为最高追求，矢志不渝培养一流人才，打造国之重器，始终奋进在中国高等教育第一方阵前列。
+    \begin{textbox}{ysubrightblue}
+        学校立足河北、面向全国、走向世界，在重型机械及装备等方向形成鲜明办学特色。
     \end{textbox}
       
 \end{frame}
@@ -273,7 +273,7 @@
 
 \begin{frame}
     \frametitle{块}
-    块（block）共分为三种，分别是默认、example和alert，颜色分别使用北航蓝、品质灰和中国红。
+    块（block）共分为三种，分别是默认、example和alert，颜色分别使用燕大蓝、中性灰和辅助红。
     \begin{block}{默认块}
         一个系统默认的块，是这样的。
     \end{block}
@@ -337,8 +337,8 @@
             \centering
             \begin{figure}
                 \centering
-                \includegraphics[width=0.6\textwidth]{figs/bj001.png}
-                    \caption{北京一号}
+                \includegraphics[width=0.95\textwidth]{figs/ysu_campus_map.jpg}
+                    \caption{燕山大学校园导览图}
                     \label{fig1}
             \end{figure}
             
