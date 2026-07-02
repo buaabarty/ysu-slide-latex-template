@@ -36,7 +36,7 @@
 \newcommand{\banner}{%
     \begin{tikzpicture}[overlay, remember picture]
         \node[anchor=north west, xshift=0.7cm, yshift=-0.18cm] at (current page.north west) {
-            \includegraphics[width=3.75cm]{logos/ysu_logo.png}
+            \includegraphics[width=3.75cm]{logos/ysu_logo.pdf}
         };
     \end{tikzpicture}
 }
@@ -118,16 +118,19 @@
 % 普通页面右下角Logo
 \newcommand{\footerlogo}{%
     \begin{tikzpicture}[overlay, remember picture]
-        \node[anchor=south east, xshift=-1.08cm, yshift=0.03cm] at (current page.south east) {
-            \includegraphics[width=1.65cm]{logos/ysu_logo_bottom.png}
+        \node[anchor=south east, xshift=-1.08cm, yshift=-0.07cm] at (current page.south east) {
+            \includegraphics[width=1.65cm]{logos/ysu_logo_bottom.pdf}
         };
     \end{tikzpicture}
 }
 
 %右下角页码导航，原模板代码
 \setbeamertemplate{navigation symbols}{%
-    \vspace{-6pt}
-    \usebeamercolor[fg]{title}\usebeamerfont*{navigation symbols}\insertframenumber/\inserttotalframenumber
+    \begin{tikzpicture}[overlay, remember picture]
+        \node[anchor=south east, text=white, xshift=-0.12cm, yshift=0.02cm] at (current page.south east) {
+            \usebeamerfont*{navigation symbols}\insertframenumber/\inserttotalframenumber
+        };
+    \end{tikzpicture}
 }
 
 %% 普通页面frame背景模板
