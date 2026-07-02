@@ -1,0 +1,124 @@
+%% 版本：1.0
+%% 作者：景宗雷
+%% 本文件的主要作用，是为了定义燕山大学标准色与辅助色
+%% 完成时间：2024-07-02
+
+\RequirePackage{xcolor}
+
+% YSU Blue 燕大蓝，来自燕山大学视觉形象识别系统主标识
+\definecolor{ysublue}{RGB}{31, 41, 106}
+\colorlet{ysublue20}{ysublue!20!white}
+\colorlet{ysublue30}{ysublue!30!white}
+\colorlet{ysublue40}{ysublue!40!white}
+\colorlet{ysublue50}{ysublue!50!white}
+\colorlet{ysublue60}{ysublue!60!white}
+\colorlet{ysublue70}{ysublue!70!white}
+\colorlet{ysublue80}{ysublue!80!white}
+\colorlet{ysublue90}{ysublue!90!white}
+
+% Bright Blue 亮蓝色，辅助色
+\definecolor{ysubrightblue}{RGB}{0, 147, 211}
+\colorlet{ysubrightblue20}{ysubrightblue!20!white}
+\colorlet{ysubrightblue30}{ysubrightblue!30!white}
+\colorlet{ysubrightblue40}{ysubrightblue!40!white}
+\colorlet{ysubrightblue50}{ysubrightblue!50!white}
+\colorlet{ysubrightblue60}{ysubrightblue!60!white}
+\colorlet{ysubrightblue70}{ysubrightblue!70!white}
+\colorlet{ysubrightblue80}{ysubrightblue!80!white}
+\colorlet{ysubrightblue90}{ysubrightblue!90!white}
+
+% Light Blue 浅蓝色，辅助色
+\definecolor{ysulightblue}{RGB}{154, 197, 226}
+\colorlet{ysulightblue20}{ysulightblue!20!white}
+\colorlet{ysulightblue30}{ysulightblue!30!white}
+\colorlet{ysulightblue40}{ysulightblue!40!white}
+\colorlet{ysulightblue50}{ysulightblue!50!white}
+\colorlet{ysulightblue60}{ysulightblue!60!white}
+\colorlet{ysulightblue70}{ysulightblue!70!white}
+\colorlet{ysulightblue80}{ysulightblue!80!white}
+\colorlet{ysulightblue90}{ysulightblue!90!white}
+
+% Accent Red 辅助红
+\definecolor{ysured}{RGB}{181, 64, 75}
+\colorlet{ysured20}{ysured!20!white}
+\colorlet{ysured30}{ysured!30!white}
+\colorlet{ysured40}{ysured!40!white}
+\colorlet{ysured50}{ysured!50!white}
+\colorlet{ysured60}{ysured!60!white}
+\colorlet{ysured70}{ysured!70!white}
+\colorlet{ysured80}{ysured!80!white}
+\colorlet{ysured90}{ysured!90!white}
+
+% Neutral Gray 中性灰
+\definecolor{ysugray}{RGB}{144, 144, 144}
+\colorlet{ysugray20}{ysugray!20!white}
+\colorlet{ysugray30}{ysugray!30!white}
+\colorlet{ysugray40}{ysugray!40!white}
+\colorlet{ysugray50}{ysugray!50!white}
+\colorlet{ysugray60}{ysugray!60!white}
+\colorlet{ysugray70}{ysugray!70!white}
+\colorlet{ysugray80}{ysugray!80!white}
+\colorlet{ysugray90}{ysugray!90!white}
+
+% Gold 金色
+\definecolor{ysugold}{RGB}{226, 148, 60}
+\colorlet{ysugold20}{ysugold!20!white}
+\colorlet{ysugold30}{ysugold!30!white}
+\colorlet{ysugold40}{ysugold!40!white}
+\colorlet{ysugold50}{ysugold!50!white}
+\colorlet{ysugold60}{ysugold!60!white}
+\colorlet{ysugold70}{ysugold!70!white}
+\colorlet{ysugold80}{ysugold!80!white}
+\colorlet{ysugold90}{ysugold!90!white}
+
+% Silver 银色
+\definecolor{ysusilver}{RGB}{209, 211, 211}
+\colorlet{ysusilver10}{ysusilver!10!white}
+\colorlet{ysusilver20}{ysusilver!20!white}
+\colorlet{ysusilver30}{ysusilver!30!white}
+\colorlet{ysusilver40}{ysusilver!40!white}
+\colorlet{ysusilver50}{ysusilver!50!white}
+\colorlet{ysusilver60}{ysusilver!60!white}
+\colorlet{ysusilver70}{ysusilver!70!white}
+\colorlet{ysusilver80}{ysusilver!80!white}
+\colorlet{ysusilver90}{ysusilver!90!white}
+
+% Other auxiliary colors sampled from the official VI auxiliary palette
+\definecolor{ysugreen}{RGB}{0, 104, 53}
+\definecolor{ysulime}{RGB}{95, 170, 49}
+\definecolor{ysuviolet}{RGB}{131, 121, 170}
+\definecolor{ysubrown}{RGB}{97, 76, 63}
+
+%代码注释的颜色
+\definecolor{mygreen}{rgb}{0,0.6,0}
+
+\mode<presentation>
+
+% 定义元素基本颜色
+\setbeamercolor{structure}{fg=ysublue, bg=}%主颜色。如果没有其他定义，则显示此颜色。
+\setbeamercolor{palette primary}{use=structure, fg=ysublue, bg=}
+
+\setbeamercolor{item}{fg=ysublue70}%item的颜色，是70%的燕大蓝。
+\setbeamercolor{item projected}{fg=ysublue70}
+
+\setbeamercolor{enumerate item}{fg=black, bg=}
+\setbeamercolor{enumerate subitem}{fg=black, bg=}
+\setbeamercolor{enumerate subsubitem}{fg=black, bg=}
+
+%默认的标题、副标题、作者、单位、日期，都是白色
+\setbeamercolor{title}{fg=white,bg=}
+\setbeamercolor{subtitle}{fg=white,bg=}
+\setbeamercolor{author}{fg=white,bg=}
+\setbeamercolor{date}{fg=white,bg=}
+
+%默认block，颜色是燕大蓝
+\setbeamercolor{block title}{bg=ysublue,fg=white}
+\setbeamercolor{block body}{bg=ysublue20}
+
+%示例block，颜色是中性灰
+\setbeamercolor{block title example}{bg=ysugray,fg=white}
+\setbeamercolor{block body example}{bg=ysugray20}
+
+%提示block，颜色是辅助红
+\setbeamercolor{block title alerted}{bg=ysured,fg=white}
+\setbeamercolor{block body alerted}{bg=ysured20}

@@ -15,11 +15,11 @@
 
 %超链接的颜色等信息
 \hypersetup{
-    %colorlinks=true, %超链接颜色，全部使用中国红。
-    linkcolor=chinared,
-    urlcolor=chinared,
-    citecolor=chinared,
-    anchorcolor=chinared,
+    %colorlinks=true, %超链接颜色，全部使用辅助红。
+    linkcolor=ysured,
+    urlcolor=ysured,
+    citecolor=ysured,
+    anchorcolor=ysured,
 }
 
 %代码块的一些设定，原模板代码
@@ -29,17 +29,18 @@
     numbers=left, %行号
     numberstyle=\small, %行号字体大小
     basicstyle=\footnotesize\rmfamily, %代码字体大小
+    showstringspaces=false, %不显示字符串中的空格标记
     breaklines=true, %自动换行
-    backgroundcolor=\color{buaasilver20}, %背景颜色
+    backgroundcolor=\color{ysusilver20}, %背景颜色
     xleftmargin=0cm, %代码块左侧空白
     xrightmargin=0.3cm, %代码块右侧空白
     framexleftmargin=-2em, %代码块左侧空白
     numbersep=-1em, % 行号偏移量
-    keywordstyle=\bfseries\color{buaablue}, %关键字颜色
-    stringstyle=\color{buaablue}, %字符串颜色
+    keywordstyle=\bfseries\color{ysublue}, %关键字颜色
+    stringstyle=\color{ysublue}, %字符串颜色
     commentstyle=\color{mygreen}, %注释颜色
-    rulesepcolor= \color{buaasilver40}, %代码块边框颜色
-    rulecolor=\color{buaablue}, %代码块边框颜色
+    rulesepcolor= \color{ysusilver40}, %代码块边框颜色
+    rulecolor=\color{ysublue}, %代码块边框颜色
     deletekeywords={compile}, %删除关键字
     escapechar=\&, %逃逸字符
     escapeinside={<@}{@>}   %逃逸字符
@@ -47,7 +48,7 @@
 
 %% 代码块标题设定
 \DeclareCaptionFormat{codecaptionformat}{%
-  \parbox{\textwidth}{\hspace{2em}\textcolor{violet}\faCode~\textcolor{violet}{#1#2}\hspace{.5em}#3}%代码块caption的设置
+  \parbox{\textwidth}{\hspace{2em}\textcolor{ysuviolet}\faCode~\textcolor{ysuviolet}{#1#2}\hspace{.5em}#3}%代码块caption的设置
 }
 \captionsetup[lstlisting]{format=codecaptionformat}
 
@@ -75,11 +76,11 @@
     boxrule=.5pt,%边框
     left=5pt, right=5pt, top=0pt, bottom=0pt,%文字边距
     boxsep=5pt,
-    colframe=buaablue,
-    colback=buaablue20,
-    colbacktitle=buaablue20,
-    coltext=buaablue,
-    title={\textcolor{buaablue}{\faStickyNoteO\hspace{.5em}\bfseries{\textbf{#1}}}},
+    colframe=ysublue,
+    colback=ysublue20,
+    colbacktitle=ysublue20,
+    coltext=ysublue,
+    title={\textcolor{ysublue}{\faStickyNoteO\hspace{.5em}\bfseries{\textbf{#1}}}},
     halign=left,
 }
 %设置重要提示框
@@ -90,11 +91,11 @@
     boxrule=.5pt,
     left=5pt, right=5pt, top=0pt, bottom=0pt,
     boxsep=5pt,
-    colframe=chinared,
-    colback=chinared20,
-    colbacktitle=chinared20,
-    coltext=chinared,
-    title={\textcolor{chinared}{\faExclamationCircle\hspace{.5em}\bfseries{\textbf{#1}}}},
+    colframe=ysured,
+    colback=ysured20,
+    colbacktitle=ysured20,
+    coltext=ysured,
+    title={\textcolor{ysured}{\faExclamationCircle\hspace{.5em}\bfseries{\textbf{#1}}}},
     halign=left,
 }
 %列表框

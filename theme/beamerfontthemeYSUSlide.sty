@@ -110,81 +110,81 @@
 \providecommand{\textls}[2][]{#2}{} % defined only if microtype is loaded
 
 % 定义的一些其他命令
-\def\beamerbuaaslide@titleformat#1{#1}
-\def\beamerbuaaslide@subtitleformat#1{#1}
-\def\beamerbuaaslide@partformat#1{#1}
-\def\beamerbuaaslide@frametitleformat#1{#1}
+\def\beamerysuslide@titleformat#1{#1}
+\def\beamerysuslide@subtitleformat#1{#1}
+\def\beamerysuslide@partformat#1{#1}
+\def\beamerysuslide@frametitleformat#1{#1}
 
 %% 标题文字定义
 \pgfkeys{
-    /beamerbuaaslide/font/title/.cd,
+    /beamerysuslide/font/title/.cd,
     .is choice,
     .default=regular,
     regular/.code={%
-        \let\beamerbuaaslide@titleformatcaps\emptydummya%
-        \let\beamerbuaaslide@titleformatspacinga\emptydummya%
-        \let\beamerbuaaslide@titleformatspacingb\emptydummyb%
+        \let\beamerysuslide@titleformatcaps\emptydummya%
+        \let\beamerysuslide@titleformatspacinga\emptydummya%
+        \let\beamerysuslide@titleformatspacingb\emptydummyb%
     },
     allcaps/.code={%
-        \let\beamerbuaaslide@titleformatcaps\MakeTextUppercase%
-        \let\beamerbuaaslide@titleformatspacinga\emptydummya%
-        \let\beamerbuaaslide@titleformatspacingb\emptydummyb%
+        \let\beamerysuslide@titleformatcaps\MakeTextUppercase%
+        \let\beamerysuslide@titleformatspacinga\emptydummya%
+        \let\beamerysuslide@titleformatspacingb\emptydummyb%
     },
 }
 
 %% 副标题文字定义
 \pgfkeys{
-    /beamerbuaaslide/font/subtitle/.cd,
+    /beamerysuslide/font/subtitle/.cd,
     .is choice,
     .default=allcaps,
     regular/.code={%
-        \let\beamerbuaaslide@subtitleformatcaps\emptydummya%
-        \let\beamerbuaaslide@subtitleformatspacinga\emptydummya%
-        \let\beamerbuaaslide@subtitleformatspacingb\emptydummyb%
+        \let\beamerysuslide@subtitleformatcaps\emptydummya%
+        \let\beamerysuslide@subtitleformatspacinga\emptydummya%
+        \let\beamerysuslide@subtitleformatspacingb\emptydummyb%
         \setbeamerfont{subtitle long}{size*={9pt}{11pt},series=\bfseries}  % 18pt, baselineskip 22pt
     },
     allcaps/.code={%
-        \let\beamerbuaaslide@subtitleformatcaps\MakeTextUppercase%
-        \let\beamerbuaaslide@subtitleformatspacinga\emptydummya%
-        \let\beamerbuaaslide@subtitleformatspacingb\emptydummyb%
+        \let\beamerysuslide@subtitleformatcaps\MakeTextUppercase%
+        \let\beamerysuslide@subtitleformatspacinga\emptydummya%
+        \let\beamerysuslide@subtitleformatspacingb\emptydummyb%
         \setbeamerfont{title}{size*={16pt}{16pt},series=\bfseries} % 30pt, baselineskip 36pt%
     },
 }
 
 %% 普通页面文字设置
 \pgfkeys{
-    /beamerbuaaslide/font/frametitle/.cd,
+    /beamerysuslide/font/frametitle/.cd,
     .is choice,
     .default=allcaps,
     regular/.code={%
-        \let\beamerbuaaslide@frametitleformatcaps\emptydummya%
-        \let\beamerbuaaslide@frametitleformatspacinga\emptydummya%
-        \let\beamerbuaaslide@frametitleformatspacingb\emptydummyb%
+        \let\beamerysuslide@frametitleformatcaps\emptydummya%
+        \let\beamerysuslide@frametitleformatspacinga\emptydummya%
+        \let\beamerysuslide@frametitleformatspacingb\emptydummyb%
         \setbeamerfont{frametitle}{size*={14pt}{18pt},series=\bfseries} % 32pt, baselineskip 36pt%
     },
     allcaps/.code={%
-        \let\beamerbuaaslide@frametitleformatcaps\MakeTextUppercase%
-        \let\beamerbuaaslide@frametitleformatspacinga\emptydummya%
-        \let\beamerbuaaslide@frametitleformatspacingb\emptydummyb%
+        \let\beamerysuslide@frametitleformatcaps\MakeTextUppercase%
+        \let\beamerysuslide@frametitleformatspacinga\emptydummya%
+        \let\beamerysuslide@frametitleformatspacingb\emptydummyb%
         \setbeamerfont{frametitle}{size*={14pt}{18pt},series=\bfseries} % 32pt, baselineskip 36pt%
     },
 }
 
 %% 段落文字设置
 \pgfkeys{
-    /beamerbuaaslide/font/part/.cd,
+    /beamerysuslide/font/part/.cd,
     .is choice,
     .default=allcaps,
     regular/.code={%
-        \let\beamerbuaaslide@partformatcaps\emptydummya%
-        \let\beamerbuaaslide@partformatspacinga\emptydummya%
-        \let\beamerbuaaslide@partformatspacingb\emptydummyb%
+        \let\beamerysuslide@partformatcaps\emptydummya%
+        \let\beamerysuslide@partformatspacinga\emptydummya%
+        \let\beamerysuslide@partformatspacingb\emptydummyb%
         \setbeamerfont{part}{size*={16pt}{18pt},series=\bfseries} % 30pt, baselineskip 36pt%
     },
     allcaps/.code={%
-        \let\beamerbuaaslide@partformatcaps\MakeTextUppercase%
-        \let\beamerbuaaslide@partformatspacinga\emptydummya%
-        \let\beamerbuaaslide@partformatspacingb\emptydummyb%
+        \let\beamerysuslide@partformatcaps\MakeTextUppercase%
+        \let\beamerysuslide@partformatspacinga\emptydummya%
+        \let\beamerysuslide@partformatspacingb\emptydummyb%
         \setbeamerfont{part}{size*={16pt}{18pt},series=\bfseries} % 30pt, baselineskip 36pt%
     },
 }
@@ -192,19 +192,19 @@
 % redefine beamer title, subtitle, part and frametitle command
 \patchcmd{\beamer@title}%
     {\def\inserttitle{#2}}%
-    {\protected\def\inserttitle{{\beamerbuaaslide@titleformatspacingb{LetterSpace=15.0}\beamerbuaaslide@titleformatcaps{\beamerbuaaslide@titleformatspacinga[120]{#2}}}}}%
+    {\protected\def\inserttitle{{\beamerysuslide@titleformatspacingb{LetterSpace=15.0}\beamerysuslide@titleformatcaps{\beamerysuslide@titleformatspacinga[120]{#2}}}}}%
     {}%
-    {\PackageError{beamerbuaaslide}{Patching original title failed}\@ehc}
+    {\PackageError{beamerysuslide}{Patching original title failed}\@ehc}
 \patchcmd{\beamer@subtitle}%
     {\def\insertsubtitle{#2}}%
-    {\protected\def\insertsubtitle{{\beamerbuaaslide@subtitleformatspacingb{LetterSpace=15.0}\beamerbuaaslide@subtitleformatcaps{\beamerbuaaslide@subtitleformatspacinga[120]{#2}}}}}%
+    {\protected\def\insertsubtitle{{\beamerysuslide@subtitleformatspacingb{LetterSpace=15.0}\beamerysuslide@subtitleformatcaps{\beamerysuslide@subtitleformatspacinga[120]{#2}}}}}%
     {}%
-    {\PackageError{beamerbuaaslide}{Patching original subtitle failed}\@ehc}
+    {\PackageError{beamerysuslide}{Patching original subtitle failed}\@ehc}
 \patchcmd{\beamer@part}%
     {\def\insertpart{\expandafter\hyperlink\partlink}}%
-    {\def\insertpart{{\beamerbuaaslide@partformatspacingb{LetterSpace=15.0}\beamerbuaaslide@partformatcaps{\beamerbuaaslide@partformatspacinga[120]{\expandafter\hyperlink\partlink}}}}}%
+    {\def\insertpart{{\beamerysuslide@partformatspacingb{LetterSpace=15.0}\beamerysuslide@partformatcaps{\beamerysuslide@partformatspacinga[120]{\expandafter\hyperlink\partlink}}}}}%
     {}%
-    {\PackageError{beamerbuaaslide}{Patching original part failed}\@ehc}
+    {\PackageError{beamerysuslide}{Patching original part failed}\@ehc}
 \patchcmd{\beamer@@frametitle}
     {{%
         \gdef\insertframetitle{{#2\ifnum\beamer@autobreakcount>0\relax{}\space%
@@ -213,12 +213,12 @@
         \gdef\beamer@shortframetitle{#1}%
     }}
     {{%
-        \gdef\insertframetitle{{\beamerbuaaslide@frametitleformatcaps{#2}\ifnum%
+        \gdef\insertframetitle{{\beamerysuslide@frametitleformatcaps{#2}\ifnum%
         \beamer@autobreakcount>0\relax{}\space%
         \usebeamertemplate*{frametitle continuation}\fi}}%
         \gdef\beamer@frametitle{#2}%
         \gdef\beamer@shortframetitle{#1}%
     }}
     {}
-    {\PackageError{beamerbuaaslide}{Patching original frame title failed}\@ehc}
+    {\PackageError{beamerysuslide}{Patching original frame title failed}\@ehc}
 \makeatother
