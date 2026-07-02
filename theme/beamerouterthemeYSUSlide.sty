@@ -35,8 +35,8 @@
 %首页顶栏logo
 \newcommand{\banner}{%
     \begin{tikzpicture}[overlay, remember picture]
-        \node[anchor=north west, xshift=0.6cm, yshift=-0.3cm] at (current page.north west) {
-            \includegraphics[width=5.2cm]{logos/ysu_logo.png}
+        \node[anchor=north west, xshift=0.7cm, yshift=-0.18cm] at (current page.north west) {
+            \includegraphics[width=4.25cm]{logos/ysu_logo.png}
         };
     \end{tikzpicture}
 }
@@ -47,7 +47,7 @@
         \draw [fill=#1, draw=none, rounded corners=2pt] (current page.south east)
         [turtle={
             lt, fd=1.1\paperwidth, 
-            rt, fd=0.03\paperheight, 
+            rt, fd=0.06\paperheight, 
             rt, fd=.8375\paperwidth, 
             lt=45, fd=1.5ex, 
             rt=45, fd=.25\paperwidth, 
@@ -109,8 +109,8 @@
 % 普通页面右下角Logo
 \newcommand{\footerlogo}{%
     \begin{tikzpicture}[overlay, remember picture]
-        \node[anchor=south east, xshift=-1.2cm, yshift=-0.1cm] at (current page.south east) {
-            \includegraphics[width=2.6cm]{logos/ysu_logo_bottom.png}
+        \node[anchor=south east, xshift=-1.25cm, yshift=0.02cm] at (current page.south east) {
+            \includegraphics[width=1.75cm]{logos/ysu_logo_bottom.png}
         };
     \end{tikzpicture}
 }
