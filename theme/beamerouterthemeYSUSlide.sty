@@ -68,7 +68,6 @@
     \topslider{white}
     \banner %首页的Logo
     \bottomslider{white} %首页底部颜色
-    \ysuurl %首页底部网址
 }
 
 %首页正文部分
@@ -100,17 +99,27 @@
 }
 
 %普通页面左下角信息
+\newlength{\ysufootlineheight}
+\setlength{\ysufootlineheight}{0.06\paperheight}
+\setbeamercolor{footline}{fg=white,bg=}
 \setbeamertemplate{footline}{%
-    \hspace{0.8cm}
-    \usebeamercolor[fg]{title}\insertauthor\enspace\vrule width0.3pt\enspace\inserttitle%左下角作者信息和标题信息
-    \vspace{0.04cm} %页脚到底部的距离
+    \leavevmode%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=\ysufootlineheight,dp=0pt,leftskip=0.8cm]{footline}%
+        \vbox to \ysufootlineheight{%
+            \vfil%
+            \hbox{%
+                \usebeamerfont{footline}\textcolor{white}{\insertauthor\enspace\vrule width0.3pt height0.85ex depth0.05ex\enspace\inserttitle}%
+            }%
+            \vfil%
+        }%
+    \end{beamercolorbox}%
 }
 
 % 普通页面右下角Logo
 \newcommand{\footerlogo}{%
     \begin{tikzpicture}[overlay, remember picture]
-        \node[anchor=south east, xshift=-1.15cm, yshift=0.02cm] at (current page.south east) {
-            \includegraphics[width=1.55cm]{logos/ysu_logo_bottom.png}
+        \node[anchor=south east, xshift=-1.08cm, yshift=0.03cm] at (current page.south east) {
+            \includegraphics[width=1.65cm]{logos/ysu_logo_bottom.png}
         };
     \end{tikzpicture}
 }
